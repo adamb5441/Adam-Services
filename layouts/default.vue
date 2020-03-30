@@ -2,25 +2,28 @@
   <v-app dark>
     <v-navigation-drawer
       v-model="drawer"
-      :mini-variant="miniVariant"
       fixed
       app
     >
       <v-list>
-        <v-list-item
-          v-for="(item, i) in items"
-          :key="i"
-          :to="item.to"
-          router
-          exact
+        <span
+        v-for="(item, i) in items"
+        :key="i"
         >
-          <v-list-item-action>
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title v-text="item.title" />
-          </v-list-item-content>
-        </v-list-item>
+            <v-list-item
+            v-if="item.to && item.to.length > 0"
+            :to="item.to"
+            router
+            exact
+            >
+                <v-list-item-action>
+                    <v-icon>{{ item.icon }}</v-icon>
+                </v-list-item-action>
+                <v-list-item-content>
+                    <v-list-item-title v-text="item.title" />
+                </v-list-item-content>
+            </v-list-item>
+        </span>
       </v-list>
     </v-navigation-drawer>
     <v-app-bar
@@ -41,22 +44,13 @@
 
 <script>
 export default {
+  components: {
+    
+  },
   data () {
     return {
       drawer: true,
-      items: [
-        {
-          icon: 'mdi-apps',
-          title: 'Welcome',
-          to: '/'
-        },
-        {
-          icon: 'mdi-chart-bubble',
-          title: 'Inspire',
-          to: '/inspire'
-        }
-      ],
-      miniVariant: false,
+      items: [],
       right: true,
       rightDrawer: false,
       title: 'Adam Brown'
@@ -65,6 +59,11 @@ export default {
   created(){
     if(this.isMobile){
       this.drawer = false
+    }
+  },
+  methods: {
+    setNavBtns(navs){
+      this.items = navs
     }
   }, 
   computed: {
