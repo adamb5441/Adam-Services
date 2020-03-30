@@ -7,7 +7,7 @@
     >
       <v-list>
         <span
-        v-for="(item, i) in items"
+        v-for="(item, i) in navs"
         :key="i"
         >
             <v-list-item
@@ -67,6 +67,9 @@ export default {
     }
   }, 
   computed: {
+    navs(){
+      return this.$store.getters.getNav
+    },
     isMobile () {
       switch (this.$vuetify.breakpoint.name) {
         case 'xs': return true

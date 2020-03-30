@@ -9,6 +9,11 @@ const createStore = () => {
       createNavigation (state, payload) {
         state.navigation = payload
       }
+    },
+    getters: {
+      getNav(state){
+        return state.navigation
+      }
     }
   })
 }
