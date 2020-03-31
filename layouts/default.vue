@@ -27,6 +27,7 @@
       </v-list>
     </v-navigation-drawer>
     <v-app-bar
+      v-if="isMobile"
       class="hidden-md-and-up"
       fixed
       app
@@ -35,9 +36,7 @@
       <v-toolbar-title v-text="title" />
     </v-app-bar>
     <v-content>
-      <v-container>
         <nuxt />
-      </v-container>
     </v-content>
   </v-app>
 </template>

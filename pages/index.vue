@@ -1,21 +1,12 @@
 <template>
-  <v-layout
-    column
-    justify-center
-    align-center
-  >
-    <v-flex
-      xs12
-      sm8
-      md6
-    >
+    <div>
       <div id="titleGroup"> 
+        
       </div>
       <div id="aboutGroup"></div>
       <div id="projects"></div>
       <div id="contact"></div>
-    </v-flex>
-  </v-layout>
+    </div>
 </template>
 
 <script>
@@ -49,6 +40,14 @@ export default {
   
 }
 </script>
-<style lang="stylus" scoped>
 
+<style scoped>
+  #titleGroup {
+    display: block; 
+    height: 100vh; 
+    width: 100%; 
+    /* background-image: url('../static/hiking.jpg'); */
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
 </style>
