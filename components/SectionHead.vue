@@ -1,9 +1,9 @@
 <template>
     <div>
-        <h1>
+        <h1 color="primary">
             <slot></slot>
         </h1>
-        <v-divider color="primary" dark></v-divider>
+        <v-divider color="primary"></v-divider>
     </div>
 </template>
 
