@@ -7,7 +7,7 @@
           </h1>
           <h2>
             {{sub}}
-          </h2>
+          </h2> 
         </div>
       </div>
       <div class="section" id="aboutGroup">
@@ -22,9 +22,7 @@
           </div>
           <div class="aboutItem">
             <h3>{{aboutHead}}</h3>
-            <div>
-              {{about}}
-            </div>
+            <div v-html="about"></div>
           </div>
         </v-container>
       </div>
@@ -62,15 +60,29 @@
       </div>      
       <div class="section" id="Skills">
         <SectionHead>Skills</SectionHead>
+        <v-container>
+          <v-card>
+            <v-card-title>Some of my skills</v-card-title>
+            <v-divider />
 
+          </v-card>
+        </v-container>
       </div>
       <div class="section" id="contact">
         <SectionHead>Contact</SectionHead>
-        <v-container class="sectionContent" >
-          <v-text-field class="contactIn" full-width outlined label="Name"/>
-          <v-text-field class="contactIn" full-width outlined label="Email"/>
-          <v-textarea class="contactIn" full-width outlined label="Message"/>
-          <v-btn>Submit</v-btn>
+        <v-container class="contactWrapper" >
+          <v-card id="contactCard">
+            <v-card-title>Hope to speak with you soon!</v-card-title>
+            <v-divider ></v-divider>
+            <div class="contactInputsWrapper">
+              <v-text-field class="contactIn" full-width outlined label="Name"/>
+              <v-text-field class="contactIn" full-width outlined label="Email"/>
+              <v-textarea class="contactIn" full-width outlined label="Message"/>
+              <div class="contactBtnWrapper">
+                <v-btn color="primary">Submit</v-btn>
+              </div>
+            </div>
+          </v-card>
         </v-container>
         <MediaGroup />
       </div>
@@ -90,10 +102,10 @@ export default {
   },
   data: function(){
     return {
+      skills: [],
       aboutHead: "I am a passionate developer  interested in creating ideas and patterns that take on a life of there own.",
       title: "Adam Brown",
       sub: "Software Developer",
-      aboutHead: "",
       about: "<p></p>",
       navigation: [
         {
@@ -134,16 +146,27 @@ export default {
   #contact{
     
   }
-  .sectionContent{
-    padding: 50px 0;
-    width: 100%;
+  .contactWrapper{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    min-height: 40vh
+  }
+  #contactCard{
+    width: 100%;
+    max-width: 600px;
+  }
+  .contactInputsWrapper{
+    padding: 50px 20px;
+  }
+  .contactBtnWrapper{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
   }
   .contactIn{
-    width: 50%;
+
   }
   .aboutlayout{
     display: flex;

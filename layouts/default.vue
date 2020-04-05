@@ -27,9 +27,8 @@
       </v-list>
     </v-navigation-drawer>
     <v-app-bar
-      v-if="isMobile"
+      v-if="toolbar && isMobile"
       class="hidden-md-and-up"
-      fixed
       app
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
@@ -48,6 +47,7 @@ export default {
   },
   data () {
     return {
+      toolbar: false,
       drawer: true,
       items: [],
       right: true,
@@ -58,6 +58,11 @@ export default {
   created(){
     if(this.isMobile){
       this.drawer = false
+    }
+  },
+  mounted(){
+    if(this.isMobile){
+      this.toolbar = true
     }
   },
   methods: {

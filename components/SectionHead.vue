@@ -3,7 +3,7 @@
         <h1 color="primary">
             <slot></slot>
         </h1>
-        <v-divider color="primary"></v-divider>
+        <v-divider class="hrSpace" ></v-divider>
     </div>
 </template>
 
@@ -13,5 +13,7 @@ export default {
 }
 </script>
 <style scoped>
-
+    .hrSpace{
+        margin-bottom: 10px;
+    }
 </style>
