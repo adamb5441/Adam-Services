@@ -58,7 +58,7 @@
             </v-row>
           </v-container>
       </div>      
-      <div class="section" id="Skills">
+      <div class="section" id="skills">
         <SectionHead>Skills</SectionHead>
         <v-container>
           <v-card>
@@ -103,6 +103,7 @@ export default {
   data: function(){
     return {
       skills: [],
+      projects: [],
       aboutHead: "I am a passionate developer  interested in creating ideas and patterns that take on a life of there own.",
       title: "Adam Brown",
       sub: "Software Developer",
@@ -110,14 +111,34 @@ export default {
       navigation: [
         {
           icon: 'mdi-apps',
-          title: 'Welcome',
-          to: '/'
-        },
+          title: 'Home',
+          click: () => this.$vuetify.goTo(0)
+        }  ,      
         {
-          icon: 'mdi-chart-bubble',
-          title: 'Inspire',
-          to: '/inspire'
+          icon: 'mdi-apps',
+          title: 'About',
+          click: () => this.$vuetify.goTo('#aboutGroup')
+        },        
+        {
+          icon: 'mdi-apps',
+          title: 'Projects',
+          click: () => this.$vuetify.goTo('#projects')
+        },        
+        {
+          icon: 'mdi-apps',
+          title: 'Skills',
+          click: () => this.$vuetify.goTo('#skills')
         }
+        // {
+        //   icon: 'mdi-apps',
+        //   title: 'Welcome',
+        //   to: '/'
+        // },
+        // {
+        //   icon: 'mdi-chart-bubble',
+        //   title: 'Inspire',
+        //   to: '/inspire'
+        // }
       ]
     }
   },
