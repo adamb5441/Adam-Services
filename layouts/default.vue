@@ -6,6 +6,16 @@
       app
     >
       <v-list>
+        <v-list-item>
+          <v-list-item-content>
+            <v-list-item-title class="title">
+              Adam Brown
+            </v-list-item-title>
+            <v-list-item-subtitle>
+              Web Developer
+            </v-list-item-subtitle>
+          </v-list-item-content>
+        </v-list-item>
         <span
         v-for="(item, i) in navs"
         :key="i"

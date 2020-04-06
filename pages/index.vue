@@ -37,22 +37,6 @@
                 cols="4"
               >
                 <v-card flat tile class="d-flex">
-                  <v-img
-                    :src="`https://picsum.photos/500/300?image=${n * 5 + 10}`"
-                    :lazy-src="`https://picsum.photos/10/6?image=${n * 5 + 10}`"
-                    aspect-ratio="1"
-                    class="grey lighten-2"
-                  >
-                    <template v-slot:placeholder>
-                      <v-row
-                        class="fill-height ma-0"
-                        align="center"
-                        justify="center"
-                      >
-                        <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
-                      </v-row>
-                    </template>
-                  </v-img>
                 </v-card>
               </v-col>
             </v-row>
@@ -102,7 +86,12 @@ export default {
   },
   data: function(){
     return {
-      skills: [],
+      skills: [
+        {
+          img: "",
+          label: ""
+        }
+      ],
       projects: [],
       aboutHead: "I am a passionate developer  interested in creating ideas and patterns that take on a life of there own.",
       title: "Adam Brown",
@@ -110,24 +99,29 @@ export default {
       about: "<p></p>",
       navigation: [
         {
-          icon: 'mdi-apps',
+          icon: 'mdi-home',
           title: 'Home',
           click: () => this.$vuetify.goTo(0)
         }  ,      
         {
-          icon: 'mdi-apps',
+          icon: 'mdi-account',
           title: 'About',
           click: () => this.$vuetify.goTo('#aboutGroup')
         },        
         {
-          icon: 'mdi-apps',
+          icon: 'mdi-pencil',
           title: 'Projects',
           click: () => this.$vuetify.goTo('#projects')
         },        
         {
-          icon: 'mdi-apps',
+          icon: 'mdi-library',
           title: 'Skills',
           click: () => this.$vuetify.goTo('#skills')
+        },
+        {
+          icon: 'mdi-mail',
+          title: 'Contact',
+          click: () => this.$vuetify.goTo('#contact')
         }
         // {
         //   icon: 'mdi-apps',
