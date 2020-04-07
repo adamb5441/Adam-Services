@@ -48,7 +48,12 @@
           <v-card>
             <v-card-title>Some of my skills</v-card-title>
             <v-divider />
-
+            <v-row>
+              <v-col v-for="(skill,i) in skills" :key="i" :cols="skillgrid" class="skill">
+                <img class="skillImg" :src="skill.img">
+                <h3>{{skill.label}}</h3>
+              </v-col>
+            </v-row>
           </v-card>
         </v-container>
       </div>
@@ -88,8 +93,16 @@ export default {
     return {
       skills: [
         {
-          img: "",
-          label: ""
+          img: "/img/react.png",
+          label: "React"
+        },
+        {
+          img: "/img/vue-logo.png",
+          label: "Vue"
+        },        
+        {
+          img: "/img/smlNode.png",
+          label: "Node"
         }
       ],
       projects: [],
@@ -138,6 +151,17 @@ export default {
   },
   mounted(){
     this.$store.commit("createNavigation", this.navigation)
+  },
+  computed: {
+    skillgrid () {
+      switch (this.$vuetify.breakpoint.name) {
+        case 'xs': return 4
+        case 'sm': return 4
+        case 'md': return 2
+        case 'lg': return 1
+        case 'xl': return 1
+      }
+    }
   }
   
 }
@@ -189,5 +213,16 @@ export default {
   }
   .aboutItem{
     margin: 20px;
+  }
+  .skill{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+  .skillImg{
+    height: 75px;
+    margin: 5px;
   }
 </style>
