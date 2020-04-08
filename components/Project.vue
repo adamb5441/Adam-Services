@@ -26,7 +26,7 @@ export default {
     name: "Project",
     props: {
         title: {
-            default: "New Project", 
+            default: "New Project",  
             type: String
         },
         mainImg: {
