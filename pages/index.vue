@@ -36,8 +36,7 @@
                 class="d-flex child-flex"
                 cols="4"
               >
-                <v-card flat tile class="d-flex">
-                </v-card>
+                <ProjectCard></ProjectCard>
               </v-col>
             </v-row>
           </v-container>
@@ -83,11 +82,13 @@ import Logo from '~/components/Logo.vue'
 import VuetifyLogo from '~/components/VuetifyLogo.vue'
 import SectionHead from '~/components/SectionHead'
 import MediaGroup from '~/components/MediaGroup'
+import ProjectCard from '~/components/Project'
 export default {
   name: "Portfolio",
   components: {
     MediaGroup,
-    SectionHead
+    SectionHead,
+    ProjectCard
   },
   data: function(){
     return {
@@ -251,7 +252,7 @@ export default {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 100%;
+    min-height: 50vh;
   }
   .skill{
     display: flex;
