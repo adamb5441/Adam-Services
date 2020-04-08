@@ -44,12 +44,12 @@
       </div>      
       <div class="section" id="skills">
         <SectionHead>Skills</SectionHead>
-        <v-container>
-          <v-card>
+        <v-container class="skillWrapper">
+          <v-card class="skillCard">
             <v-card-title>Some of my skills</v-card-title>
             <v-divider />
-            <v-row>
-              <v-col v-for="(skill,i) in skills" :key="i" :cols="skillgrid" class="skill">
+            <v-row class="skillGridRow" align-content="center" justify="center">
+              <v-col v-for="(skill,i) in skills" :key="i" cols=4 md=2 class="skill">
                 <img class="skillImg" :src="skill.img">
                 <h3>{{skill.label}}</h3>
               </v-col>
@@ -93,17 +93,45 @@ export default {
     return {
       skills: [
         {
+          img: "/img/vue-logo.png",
+          label: "Vue"
+        },    
+        {
           img: "/img/react.png",
           label: "React"
         },
         {
-          img: "/img/vue-logo.png",
-          label: "Vue"
-        },        
+          img: "/img/jquery.png",
+          label: "JQuery"
+        },    
         {
           img: "/img/smlNode.png",
           label: "Node"
-        }
+        },
+        {
+          img: "/img/express.png",
+          label: "Express"
+        },
+        {
+          img: "/img/mvc.net_-300x160.png",
+          label: ".NET MVC"
+        },
+        {
+          img: "/img/ENTITY.png",
+          label: "Entity"
+        },
+        {
+          img: "/img/MSSQL.png",
+          label: "SQL"
+        },
+        {
+          img: "/img/LINQ.png",
+          label: "Linq"
+        },
+        {
+          img: "/img/postman.png",
+          label: "Postman"
+        },
       ],
       projects: [],
       aboutHead: "I am a passionate developer  interested in creating ideas and patterns that take on a life of there own.",
@@ -158,8 +186,8 @@ export default {
         case 'xs': return 4
         case 'sm': return 4
         case 'md': return 2
-        case 'lg': return 1
-        case 'xl': return 1
+        case 'lg': return 2
+        case 'xl': return 2
       }
     }
   }
@@ -180,7 +208,8 @@ export default {
     margin: 10px;
   }
   .section{
-    min-height: 50vh;
+    min-height: 60vh;
+    margin-top: 20px;
   }
   #contact{
     
@@ -214,15 +243,32 @@ export default {
   .aboutItem{
     margin: 20px;
   }
+  #skills{
+    min-height: 60vh;
+  }
+  .skillWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+  }
   .skill{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 10px;
+    margin: 10px;
   }
   .skillImg{
-    height: 75px;
+    height: 10vh;
+    margin: 15px;
+  }
+  .skillGridRow{
+    padding: 20px;
+  }
+  .skillCard{
     margin: 5px;
   }
 </style>
