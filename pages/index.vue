@@ -14,15 +14,9 @@
         <SectionHead>About</SectionHead>
         <v-container class="aboutlayout">
           <div class="aboutItem" >
-            <v-img
-                    :src="`https://picsum.photos/500/300?image=${1 * 5 + 10}`"
-                    :lazy-src="`https://picsum.photos/10/6?image=${1 * 5 + 10}`"
-                    class="grey lighten-2"
-                  />
           </div>
           <div class="aboutItem">
             <h3>{{aboutHead}}</h3>
-            <div v-html="about"></div>
           </div>
         </v-container>
       </div>
@@ -31,12 +25,21 @@
           <v-container >
             <v-row>
               <v-col
-                v-for="n in 9"
-                :key="n"
+                v-for="(project, i) in projects"
+                :key="i"
                 class="d-flex child-flex"
-                cols="4"
+                cols="12"
+                md="4"
               >
-                <ProjectCard></ProjectCard>
+                <ProjectCard 
+                :title="project.title"
+                :mainImg="project.mainImg"
+                :imgs="project.imgs"
+                :descriptionShort="project.descriptionShort"
+                :descriptionLong="project.descriptionLong"
+                :repoLink="project.repoLink"
+                :siteLink="project.siteLink"
+                ></ProjectCard>
               </v-col>
             </v-row>
           </v-container>
@@ -134,7 +137,35 @@ export default {
           label: "Postman"
         },
       ],
-      projects: [],
+      projects: [
+        {
+          title: "This portfolio",
+          mainImg: "/img/NUXT.png"
+        },
+        {
+          title: "Keyboard Warrior",
+          mainImg: "/img/portimg3.png",
+          descriptionShort: "A React and node ecommerce app using bcrypt login.",
+          descriptionLong: "The Keyboard Warrior uses a offline and online cart system meaning the items you place in you cart while offline will be adding to you existing cart to create a seamless experience.",
+          imgs: [
+            "/img/ext (2).jpg",
+            "/img/ext (3).jpg",
+            "/img/ext (4).jpg"
+          ]
+        },
+        {
+          title: "BugTracker",
+          mainImg: "/img/Bugtracker/Screenshot_2019-02-12 BugTracker-1.png"
+        },
+        {
+          title: "Finite",
+          mainImg: "/img/Screenshot_2019-03-18 Finite.png"
+        },
+        {
+          title: "Trip Planner",
+          mainImg: "/img/portimg1.png"
+        }
+      ],
       aboutHead: "I am a passionate developer  interested in creating ideas and patterns that take on a life of there own.",
       title: "Adam Brown",
       sub: "Software Developer",
