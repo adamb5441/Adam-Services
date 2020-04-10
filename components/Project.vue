@@ -24,8 +24,20 @@
     <v-dialog
         v-model="dialog"
         class="modal"
-        width="800px"
       >
+        <v-btn 
+            fab
+            dark
+            fixed
+            x-large
+            top
+            right 
+            style="modalX" 
+            icon 
+            @click="dialog = false"
+        >
+            <v-icon>mdi-close</v-icon>
+        </v-btn>
         <v-card class="modelCard">
         <v-carousel
             cycle
@@ -37,6 +49,7 @@
                 :key="i"
                 :src="img"
             >
+
             </v-carousel-item>
         </v-carousel>
   
@@ -89,8 +102,16 @@ export default {
     }),
 }
 </script>
-<style scoped>
+<style >
+.v-btn--fab.v-size--x-large {
+    height: 10vh;
+    width: 72px;
+}
+.modalX{
+    margin-top: 50px;
+}
 .projectCard{
+    height: 100%;
 }
 .projectBtn{
     min-width: 40px;

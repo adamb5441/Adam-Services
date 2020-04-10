@@ -13,11 +13,19 @@
       <div class="section" id="aboutGroup">
         <SectionHead>About</SectionHead>
         <v-container class="aboutlayout">
-          <div class="aboutItem" >
-          </div>
-          <div class="aboutItem">
+
+            <v-card class="aboutCard">
+          <v-row class="aboutRow" justify="center" align-content="center">
+          <v-col cols="12" md="6" class="" >
+            <v-img :aspect-ratio="15/10" style="border-radius: 1%"  src="/img/EDIT-6704.JPG" />
+          </v-col>
+          <v-col cols="12" md="6" class="">
             <h3>{{aboutHead}}</h3>
-          </div>
+            <p></p>
+          </v-col>
+          </v-row>
+
+        </v-card>
         </v-container>
       </div>
       <div class="section" id="projects">
@@ -150,7 +158,6 @@ export default {
           imgs: [
             "/img/ext (2).jpg",
             "/img/ext (3).jpg",
-            "/img/ext (4).jpg"
           ]
         },
         {
@@ -228,6 +235,9 @@ export default {
 </script>
 
 <style scoped>
+.aboutRow{
+  width: 100%;
+}
   #titleGroup {
     display: block; 
     height: 100vh; 
