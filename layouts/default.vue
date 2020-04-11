@@ -4,6 +4,7 @@
       v-model="drawer"
       fixed
       app
+      width="180px"
     >
       <v-list>
         <v-list-item class="sideHead">
@@ -58,7 +59,7 @@
       
       <v-toolbar-title><h4>{{title}}</h4> <h6>{{sub}}</h6> </v-toolbar-title>
     </v-app-bar>
-    <v-content>
+    <v-content id="mainContent">
         <nuxt />
     </v-content>
   </v-app>
@@ -121,6 +122,11 @@ export default {
   @media only screen and (max-width: 600px){
     .sideHead{
       display: none;
+    }
+  }
+    @media only screen and (min-width: 600px){
+    #mainContent{
+      padding: 0 0 0 180px !important;
     }
   }
 </style>
