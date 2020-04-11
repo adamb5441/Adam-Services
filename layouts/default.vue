@@ -6,13 +6,13 @@
       app
     >
       <v-list>
-        <v-list-item>
+        <v-list-item class="sideHead">
           <v-list-item-content>
             <v-list-item-title class="title">
-              Adam Brown
+              {{title}}
             </v-list-item-title>
             <v-list-item-subtitle>
-              Web Developer
+              {{sub}}
             </v-list-item-subtitle>
           </v-list-item-content>
         </v-list-item>
@@ -35,7 +35,7 @@
             </v-list-item>
             <v-list-item
             v-else
-            @click="item.click"
+            @click="() => navEvent(item.click)"
             router
             exact
             >
@@ -55,7 +55,8 @@
       app
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-toolbar-title v-text="title" />
+      
+      <v-toolbar-title><h4>{{title}}</h4> <h6>{{sub}}</h6> </v-toolbar-title>
     </v-app-bar>
     <v-content>
         <nuxt />
@@ -75,7 +76,8 @@ export default {
       items: [],
       right: true,
       rightDrawer: false,
-      title: 'Adam Brown'
+      title: 'Adam Brown',
+      sub: 'Web Developer'
     }
   },
   created(){
@@ -91,6 +93,10 @@ export default {
   methods: {
     setNavBtns(navs){
       this.items = navs
+    },
+    navEvent(ev){
+      ev()
+      this.drawer = false
     }
   }, 
   computed: {
@@ -109,3 +115,10 @@ export default {
   }
 }
 </script>
+<style scoped>
+  @media only screen and (min-width: 600px){
+    .sideHead{
+      display: none;
+    }
+  }
+</style>

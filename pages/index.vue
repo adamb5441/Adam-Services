@@ -11,7 +11,7 @@
             <v-row justify="center" align-content="center" class="aboutContent">
               <v-col class="center d-flex child-flex" cols="12" md="3">
                 <div style="" class="center">
-                    <v-img max-height="250px" max-width="250px" class="headShot"  src="/img/EDIT-6704.JPG" />
+                    <v-img height="250px" max-width="250px" class="headShot"  src="/img/headshot.jpg" />
                 </div>
               </v-col>
               <v-col class="d-flex child-flex aboutDesc" cols="12" md="6">
@@ -166,7 +166,7 @@ export default {
         }
       ],
       siteIntro: "I am a passionate developer  interested in creating things that take on a life of there own.",
-      about: "klsajlkdjalkdjalskd lka as  asjd  jadssjd ajdsk kas a sj sdjasd asdj dka jdd  adk dajl  jdksajdlkj jdsajdslkjaslkdjaslkdja kljdsaldksajdlajs aslka jdkas  akjdkasj a  ssk s s s asks kaas ks a as kjhajkshdkjashkjshas aashdj askjhakjdhsa kaskjhdakjhdksalhdskjaa as d asj hajksahsj a sdjaskjdh ka skjdkjashkjadsh aahshkjahdjas ha ajkd  a s a h  k hk hahjashdkasjdkk asd",
+      about: "I'm a Web Developer with an interest in hiking and martial arts. I'm always looking to learn how things work and why they are the way they are. I am interested in a career in web development for its multifaceted and technical nature.",
       title: "Adam Brown",
       sub: "Software Developer",
       navigation: [
@@ -231,6 +231,7 @@ export default {
   min-height: 100%;
   display: flex;
   align-items: center;
+  font-size: 24px;
 }
 .center{
   display: flex;
@@ -267,7 +268,12 @@ export default {
   }
   #title{
     padding: 10px;
-    font-size: 40px;
+    font-size: 30px;
+  }
+  @media only screen and (min-width: 600px){
+    #title{
+      font-size: 60px;
+    }
   }
   .section{
     margin-top: 20px;
