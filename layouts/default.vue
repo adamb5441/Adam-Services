@@ -96,7 +96,9 @@ export default {
     },
     navEvent(ev){
       ev()
-      this.drawer = false
+      if(this.isMobile){
+        this.drawer = false
+      }
     }
   }, 
   computed: {
