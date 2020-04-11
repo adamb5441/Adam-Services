@@ -74,6 +74,14 @@
               </div>
             </div>
           </v-card>
+          <div class="contactGroup">
+            <v-btn href="https://github.com/adamb5441" x-large icon>
+              <v-icon dark>mdi-github</v-icon>
+            </v-btn>      
+            <v-btn  href="https://www.linkedin.com/in/adamb54/" x-large icon>
+              <v-icon dark>mdi-linkedin</v-icon>
+            </v-btn>      
+          </div>
         </v-container>
         <MediaGroup />
       </div>
@@ -227,6 +235,9 @@ export default {
 </script>
 
 <style scoped>
+.contactGroup{
+  margin: 10px;
+}
 .aboutDesc{
   min-height: 100%;
   display: flex;
@@ -279,14 +290,14 @@ export default {
     margin-top: 20px;
   }
   #contact{
-    min-height: 60vh;
+    min-height: 70vh;
   }
   .contactWrapper{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
-    min-height: 50vh;
+    min-height: 60vh;
   }
   #contactCard{
     width: 100%;
