@@ -1,7 +1,9 @@
 <template>
     <div>
-      <div class="section" id="titleGroup"> 
+      <div class="" id="titleGroup"> 
+            
         <div id="title">
+          <vue-particles style="position: absolute" color="#dedede"></vue-particles>
           <h2 style="font-size: 30px">{{siteIntro}}</h2>
         </div>
       </div>
@@ -257,15 +259,16 @@ export default {
     justify-content: space-around;
   }
   #titleGroup {
+    min-height: 60vh;
     display: block; 
     height: 100vh; 
     width: 100%; 
-    background-image: url('/img/hiking.jpg'); 
+    /* background-image: url('/img/hiking.jpg');  */
     background-repeat: no-repeat;
     background-size: 100%;
   }
   #title{
-    margin: 10px;
+    padding: 10px;
   }
   .section{
     min-height: 60vh;
