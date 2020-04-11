@@ -1,10 +1,8 @@
 <template>
     <div>
       <div class="" id="titleGroup"> 
-            
         <div id="title">
-          <vue-particles style="position: absolute" color="#dedede"></vue-particles>
-          <h2 style="font-size: 30px">{{siteIntro}}</h2>
+          <h2 >{{siteIntro}}</h2>
         </div>
       </div>
       <div class="section" id="aboutGroup">
@@ -252,7 +250,7 @@ export default {
 }
   .aboutlayout{
     padding: 0 50px;
-    min-height: 50vh;
+    min-height: 30vh;
     max-width: 1380px;
     display: flex;
     flex-direction: column;
@@ -263,26 +261,26 @@ export default {
     display: block; 
     height: 100vh; 
     width: 100%; 
-    /* background-image: url('/img/hiking.jpg');  */
+    background-image: url('/img/nightsky.jpeg');  
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
   }
   #title{
     padding: 10px;
+    font-size: 40px;
   }
   .section{
-    min-height: 60vh;
     margin-top: 20px;
   }
   #contact{
-    
+    min-height: 60vh;
   }
   .contactWrapper{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    min-height: 40vh
+    min-height: 50vh;
   }
   #contactCard{
     width: 100%;
