@@ -2,31 +2,23 @@
     <div>
       <div class="section" id="titleGroup"> 
         <div id="title">
-          <h1>
-            {{title}}
-          </h1>
-          <h2>
-            {{sub}}
-          </h2> 
+          <h2 style="font-size: 30px">{{siteIntro}}</h2>
         </div>
       </div>
       <div class="section" id="aboutGroup">
         <SectionHead>About</SectionHead>
-        <v-container class="aboutlayout">
-
-            <v-card class="aboutCard">
-          <v-row class="aboutRow" justify="center" align-content="center">
-          <v-col cols="12" md="6" class="" >
-            <v-img :aspect-ratio="15/10" style="border-radius: 1%"  src="/img/EDIT-6704.JPG" />
-          </v-col>
-          <v-col cols="12" md="6" class="">
-            <h3>{{aboutHead}}</h3>
-            <p></p>
-          </v-col>
-          </v-row>
-
-        </v-card>
-        </v-container>
+          <v-container class="aboutlayout">
+            <v-row justify="center" align-content="center" class="aboutContent">
+              <v-col class="center d-flex child-flex" cols="12" md="3">
+                <div style="" class="center">
+                    <v-img max-height="250px" max-width="250px" class="headShot"  src="/img/EDIT-6704.JPG" />
+                </div>
+              </v-col>
+              <v-col class="d-flex child-flex aboutDesc" cols="12" md="6">
+              <p>{{about}}</p>
+              </v-col>
+            </v-row>
+          </v-container>
       </div>
       <div class="section" id="projects">
         <SectionHead>Projects</SectionHead>
@@ -173,10 +165,10 @@ export default {
           mainImg: "/img/portimg1.png"
         }
       ],
-      aboutHead: "I am a passionate developer  interested in creating ideas and patterns that take on a life of there own.",
+      siteIntro: "I am a passionate developer  interested in creating things that take on a life of there own.",
+      about: "klsajlkdjalkdjalskd lka as  asjd  jadssjd ajdsk kas a sj sdjasd asdj dka jdd  adk dajl  jdksajdlkj jdsajdslkjaslkdjaslkdja kljdsaldksajdlajs aslka jdkas  akjdkasj a  ssk s s s asks kaas ks a as kjhajkshdkjashkjshas aashdj askjhakjdhsa kaskjhdakjhdksalhdskjaa as d asj hajksahsj a sdjaskjdh ka skjdkjashkjadsh aahshkjahdjas ha ajkd  a s a h  k hk hahjashdkasjdkk asd",
       title: "Adam Brown",
       sub: "Software Developer",
-      about: "<p></p>",
       navigation: [
         {
           icon: 'mdi-home',
@@ -235,14 +227,40 @@ export default {
 </script>
 
 <style scoped>
-.aboutRow{
+.aboutDesc{
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+}
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
 }
+.headShot{
+  border-radius: 50%;
+}
+.aboutSubHead{
+  display: flex;
+  flex-direction: column;
+}
+.aboutContent{
+  display: flex;
+}
+  .aboutlayout{
+    padding: 0 50px;
+    min-height: 50vh;
+    max-width: 1380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
   #titleGroup {
     display: block; 
     height: 100vh; 
     width: 100%; 
-    /* background-image: url('../static/hiking.jpg'); */
+    background-image: url('/img/hiking.jpg'); 
     background-repeat: no-repeat;
     background-size: 100%;
   }
@@ -278,10 +296,7 @@ export default {
   .contactIn{
 
   }
-  .aboutlayout{
-    display: flex;
-    justify-content: space-around;
-  }
+
   .aboutItem{
     margin: 20px;
   }
