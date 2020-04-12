@@ -51,8 +51,7 @@
       </v-list>
     </v-navigation-drawer>
     <v-app-bar
-      v-if="toolbar && isMobile"
-      class="hidden-md-and-up"
+      class="hidden-lg-and-up appbar" 
       app
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
@@ -110,7 +109,7 @@ export default {
       switch (this.$vuetify.breakpoint.name) {
         case 'xs': return true
         case 'sm': return true
-        case 'md': return false
+        case 'md': return true
         case 'lg': return false
         case 'xl': return false
       }
@@ -119,12 +118,10 @@ export default {
 }
 </script>
 <style scoped>
-  @media only screen and (max-width: 600px){
-    .sideHead{
-      display: none;
+    #mainContent{
+      padding: 64px 0px 0px !important;
     }
-  }
-    @media only screen and (min-width: 600px){
+    @media only screen and (min-width: 1260px){
     #mainContent{
       padding: 0 0 0 180px !important;
     }
