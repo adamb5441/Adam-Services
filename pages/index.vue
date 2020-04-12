@@ -66,12 +66,14 @@
             <v-card-title>Hope to speak with you soon!</v-card-title>
             <v-divider ></v-divider>
             <div class="contactInputsWrapper">
-              <v-text-field class="contactIn" full-width outlined label="Name"/>
-              <v-text-field class="contactIn" full-width outlined label="Email"/>
-              <v-textarea class="contactIn" full-width outlined label="Message"/>
-              <div class="contactBtnWrapper">
-                <v-btn color="primary">Submit</v-btn>
-              </div>
+              <v-form ref="contactForm" v-model="valid" >
+                <v-text-field v-model="name" :rules="[v => !!v || 'Name is required']" class="contactIn" full-width outlined label="Name"/>
+                <v-text-field :rules="[v => !!v || 'E-mail is required', v => /.+@.+\..+/.test(v) || 'E-mail must be valid',]" v-model="email" required class="contactIn" full-width outlined label="Email"/>
+                <v-textarea v-model="message" :rules="[v => !!v || 'Message is required']" class="contactIn" full-width outlined label="Message"/>
+                <div class="contactBtnWrapper">
+                  <v-btn @click="sentContact" color="primary">Submit</v-btn>
+                </div>
+              </v-form>
             </div>
           </v-card>
           <div class="contactGroup">
@@ -103,6 +105,10 @@ export default {
   },
   data: function(){
     return {
+      valid:  false,
+      email: "",
+      name: "",
+      message: "",
       skills: [
         {
           img: "/img/vue-logo.png",
@@ -214,6 +220,17 @@ export default {
         //   to: '/inspire'
         // }
       ]
+    }
+  },
+  methods: {
+    async sentContact(){
+      this.$refs.contactForm.validate()
+        if(this.valid){
+          this.$axios.$post("/status", {message: this.message, name: this.name, email: this.email}).then(res => {
+            console.log(res)
+          })
+        }
+
     }
   },
   mounted(){

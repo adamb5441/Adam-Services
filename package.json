@@ -16,7 +16,10 @@
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/dotenv": "^1.4.0",
     "cross-env": "^5.2.0",
+    "dotenv": "^8.2.0",
     "express": "^4.16.4",
+    "express-mailer": "^0.3.1",
+    "nodemailer": "^6.4.6",
     "nuxt": "^2.0.0"
   },
   "devDependencies": {
