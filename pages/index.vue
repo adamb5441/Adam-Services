@@ -15,7 +15,7 @@
                 </div>
               </v-col>
               <v-col class="d-flex child-flex aboutDesc" cols="12" md="6">
-              <p>{{about}}</p>
+              <p v-html="about"></p>
               </v-col>
             </v-row>
           </v-container>
@@ -180,7 +180,7 @@ export default {
         }
       ],
       siteIntro: "I am a passionate developer  interested in creating things that take on a life of there own.",
-      about: "I'm a Web Developer with an interest in hiking and martial arts. I'm always looking to learn how things work and why they are the way they are. I am interested in a career in web development for its multifaceted and technical nature.",
+      about: "<p>I'm a Developer with an interest in hiking and martial arts. I'm always looking to learn how things work and why they are the way they are.</p><p>In my work I have an obsession  for finding the most effective solution to a given problem. Then refining it into something elegant and precise. This makes me exited for new challenges that come my way.</p>",
       title: "Adam Brown",
       sub: "Software Developer",
       navigation: [
