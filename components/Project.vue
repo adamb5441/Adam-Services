@@ -12,11 +12,12 @@
                             v-if="hover"
                             absolute
                             color="#FFFFFF"
-                            class="projectBtnLayout"
                             >
-                            <v-btn @click.stop="dialog = !dialog" color="primary" class="projectBtn">Learn more</v-btn>
-                            <v-btn color="primary" class="projectBtn" v-if="repoLink.length > 0" :href="repoLink">Repository</v-btn>
-                            <v-btn color="primary"  class="projectBtn" v-if="siteLink.length > 0" :href="siteLink">Live Site</v-btn>
+                            <span class="projectBtnLayout">
+                                <v-btn @click.stop="dialog = !dialog" color="primary" class="projectBtn">Learn more</v-btn>
+                                <v-btn color="primary" class="projectBtn" v-if="repoLink.length > 0" :href="repoLink">Repository</v-btn>
+                                <v-btn color="primary"  class="projectBtn" v-if="siteLink.length > 0" :href="siteLink">Live Site</v-btn>
+                            </span>
                         </v-overlay>
                     </v-fade-transition>
                 </v-card>
@@ -108,6 +109,9 @@ export default {
     width: 72px;
 }
 .projectBtnLayout{
+    display: flex;
+    flex-direction: column;
+
 }
 .modalX{
     margin-top: 50px;
