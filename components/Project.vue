@@ -12,6 +12,7 @@
                             v-if="hover"
                             absolute
                             color="#FFFFFF"
+                            class="projectBtnLayout"
                             >
                             <v-btn @click.stop="dialog = !dialog" color="primary" class="projectBtn">Learn more</v-btn>
                             <v-btn color="primary" class="projectBtn" v-if="repoLink.length > 0" :href="repoLink">Repository</v-btn>
@@ -52,7 +53,7 @@
             </v-carousel-item>
         </v-carousel>
   
-          <v-card-text>
+          <v-card-text class="modalText">
               {{descriptionLong}}
           </v-card-text>
   
@@ -106,6 +107,8 @@ export default {
     height: 10vh;
     width: 72px;
 }
+.projectBtnLayout{
+}
 .modalX{
     margin-top: 50px;
 }
@@ -113,10 +116,14 @@ export default {
     height: 100%;
 }
 .projectBtn{
-    min-width: 40px;
+    width: 120px;
+    margin: 5px;
 }
 .modelCard{
 }
 .modal{
+}
+.modalText{
+    font-size: 18px;
 }
 </style>

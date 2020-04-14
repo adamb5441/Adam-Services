@@ -29,7 +29,7 @@
                 :key="i"
                 class="d-flex child-flex"
                 cols="12"
-                md="4"
+                lg="4"
               >
                 <ProjectCard 
                 :title="project.title"
@@ -163,7 +163,14 @@ export default {
       projects: [
         {
           title: "This portfolio",
-          mainImg: "/img/NUXT.png"
+          mainImg: "/img/NUXT.png",
+          descriptionShort: "The website your looking at is a nuxt app using serverside vue.",
+          descriptionLong: "This site was designed by me and built using nuxt and vuetify. Making the most out of the view model design to separate text and html. In addition to being set up with a github to heroku pipline to automatically deploy changes to the master branch.",
+          imgs: [
+            "/img/nuxtapp.png"
+          ],
+          repoLink: "https://github.com/adamb5441/Adam-Services"
+
         },
         {
           title: "Finite",
