@@ -24,24 +24,23 @@
     <v-dialog
         v-model="dialog"
         class="modal"
+        max-width="1000px"
       >
-        <v-btn 
+        <!-- <v-btn 
             fab
             dark
-            fixed
             x-large
             top
             right 
-            style="modalX" 
             icon 
             @click="dialog = false"
+            style="marginTop: 30px"
         >
             <v-icon>mdi-close</v-icon>
-        </v-btn>
+        </v-btn> -->
         <v-card class="modelCard">
         <v-carousel
             cycle
-            hide-delimiter-background
             show-arrows-on-hover
             >
             <v-carousel-item

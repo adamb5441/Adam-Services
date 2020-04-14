@@ -166,26 +166,81 @@ export default {
           mainImg: "/img/NUXT.png"
         },
         {
-          title: "Keyboard Warrior",
-          mainImg: "/img/portimg3.png",
-          descriptionShort: "A React and node ecommerce app using bcrypt login.",
-          descriptionLong: "The Keyboard Warrior uses a offline and online cart system meaning the items you place in you cart while offline will be adding to you existing cart to create a seamless experience.",
+          title: "Finite",
+          mainImg: "/img/Screenshot_2019-03-18 Finite.png",
+          descriptionShort: "A .NET mvc project using for managing for track a household budget.",
+          descriptionLong: "Finite is a three part application for finnancial planning. Using a budget tracker to separate by catagory and an account balance with over draft and custom alert.",
           imgs: [
-            "/img/ext (2).jpg",
-            "/img/ext (3).jpg",
-          ]
+            "/img/Screenshot_2019-03-18 Finite.png",
+            "/img/Screenshot_2019-03-18 Finite(1).png",
+            "/img/Screenshot_2019-03-18 https finiteplanner azurewebsites net.png"
+          ],
+          repoLink: "https://github.com/adamb5441/FinancialPlanner"
         },
         {
           title: "BugTracker",
-          mainImg: "/img/Bugtracker/Screenshot_2019-02-12 BugTracker-1.png"
+          mainImg: "/img/bugTracker.jpg",
+          repoLink: "https://github.com/adamb5441/BugTracker",
+          descriptionLong: "The Bug Tracker is a error managment system made in mvc5. Consisting of Developer, Submitter, Project Manager and Admin roles.",
+          descriptionShort: "Work ticketing app built using .NET mvc, linq and entity framework",
+          mainImg: "/img/Bugtracker/Screenshot_2019-02-12 BugTracker-1.png",
+          imgs: [
+            "/img/Bugtracker/Screenshot_2019-02-12 BugTracker.png",
+            "/img/Bugtracker/Screenshot_2019-02-12 BugTracker-1.png",
+            "/img/Bugtracker/Screenshot_2019-02-12 BugTracker-2.png"
+          ]
         },
         {
-          title: "Finite",
-          mainImg: "/img/Screenshot_2019-03-18 Finite.png"
+          title: "Keyboard Warrior",
+          mainImg: "/img/portimg3.png",
+          descriptionShort: "A react and node ecommerce app using bcrypt login.",
+          descriptionLong: "The Keyboard Warrior is an eCommerce app using both local storage and database carts for a dynamic user experience. Features include search by names, sorting by costs, sorting by alphabet order and bcrypt login.  All so that the user can unleash there inner keyboard warrior!",
+          imgs: [
+            "/img/ext (2).jpg",
+            "/img/ext (3).jpg",
+          ],
+          repoLink: "https://github.com/adamb5441/ecommerce"
+        },
+        {
+          title: "Legend's Blog",
+          repoLink: "https://github.com/adamb5441/mvcBlog",
+          mainImg: "/img/himalaya-evening.jpg",
+          imgs: [
+            "/img/bloglog01.png",
+            "/img/bloglogo02.png",
+            "/img/bloglogo03.png"
+          ],
+          descriptionShort: "A blog site written in .NET mvc using 0Auth login.",
+          descriptionLong: "The Legend's Blog is a .net mvc5 application with a blogpost feed, comment section and 3rd party login."
+        },
+        {
+          title: "DigiDash",
+          mainImg: "/img/portimg2.png",
+          descriptionShort: "A group project made with react node and postgres featuring custom layouts and settings",
+          descriptionLong: "DigiDash is a replacement home page made to be more useful then your standard search engine screen. With 10 different functional widgets and customization styles. Made with react grid layout and a variety of apis.",
+          imgs: [
+            "/img/digi01.png",
+            "/img/digi02.png",
+            "/img/digi03.png",
+            "/img/digi04.png"
+          ],
+          siteLink: "https://digi-dash.co/",
+          repoLink: "https://github.com/adamb5441/digidash" 
         },
         {
           title: "Trip Planner",
-          mainImg: "/img/portimg1.png"
+          mainImg: "/img/portimg1.png",
+          repoLink: "https://github.com/adamb5441/Personal_project",
+          descriptionShort: "A react node and postgres app using Auth0.",
+          descriptionLong: "The Trip Planner is a full CRUD app made with the PERN stack using Sessions and Auth0 to login and manage information under the profile. The app has a note, calendar and map portion to help stop bad planning!",
+          imgs: [
+            "/img/trip-planner/tp01.jpg",
+            "/img/trip-planner/tp02.jpg",
+            "/img/trip-planner/tp03.jpg",
+            "/img/trip-planner/tp04.jpg",
+            "/img/trip-planner/tp05.jpg",
+            "/img/trip-planner/tp06.jpg",
+          ]
         }
       ],
       siteIntro: "I am a passionate developer  interested in creating things that take on a life of there own.",
