@@ -71,7 +71,10 @@
                 <v-text-field :rules="[v => !!v || 'E-mail is required', v => /.+@.+\..+/.test(v) || 'E-mail must be valid',]" v-model="email" required class="contactIn" full-width outlined label="Email"/>
                 <v-textarea v-model="message" :rules="[v => !!v || 'Message is required']" class="contactIn" full-width outlined label="Message"/>
                 <div class="contactBtnWrapper">
-                  <v-btn @click="sentContact" color="primary">Submit</v-btn>
+                  <div v-html="contactBtnMessage"></div>
+                </div>
+                <div class="contactBtnWrapper">
+                  <v-btn :loading="contactBtnLoading" :disabled="contactBtnDisabled" @click="sentContact" color="primary">Submit</v-btn>
                 </div>
               </v-form>
             </div>
@@ -82,7 +85,10 @@
             </v-btn>      
             <v-btn  href="https://www.linkedin.com/in/adamb54/" x-large icon>
               <v-icon dark>mdi-linkedin</v-icon>
-            </v-btn>      
+            </v-btn>
+            <v-btn  href="mailto:adamb5441@gmail.com" x-large icon>
+              <v-icon dark>mdi-email</v-icon>
+            </v-btn>           
           </div>
         </v-container>
         <MediaGroup />
@@ -105,6 +111,9 @@ export default {
   },
   data: function(){
     return {
+      contactBtnDisabled: false,
+      contactBtnLoading: false,
+      contactBtnMessage: "",
       valid:  false,
       email: "",
       name: "",
@@ -226,8 +235,14 @@ export default {
     async sentContact(){
       this.$refs.contactForm.validate()
         if(this.valid){
+          this.contactBtnLoading = true;
+          this.contactBtnDisabled = true
           this.$axios.$post("/status", {message: this.message, name: this.name, email: this.email}).then(res => {
-            console.log(res)
+            this.contactBtnLoading = false;
+            this.contactBtnMessage = "Thank you, I will respond as soon as I can." 
+          }).catch( err => {
+            this.contactBtnLoading = false;
+            this.contactBtnMessage = '<p style="color: red" >Failed to send. You can still contact me at <a href="mailto:adamb5441@gmail.com">adamb5441@gmail.com</a>.</p>'
           })
         }
 
@@ -307,14 +322,15 @@ export default {
     margin-top: 20px;
   }
   #contact{
-    min-height: 70vh;
+    min-height: 90vh;
+    display: block;
   }
   .contactWrapper{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
-    min-height: 60vh;
+    min-height: 85vh;
   }
   #contactCard{
     width: 100%;
