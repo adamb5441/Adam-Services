@@ -190,7 +190,7 @@ export default {
           time: "March 2019 - present",
           acomplishments: [
             "Created data collection platform that integrated  with multiple workflow engines using .net core and Vuejs",
-            "Built cms system for email services and internal json tools using .NET mvc.",
+            "Built cms for email services and internal json tools using .NET mvc.",
             "Created data visualization platform using vuejs."
           ],
         }
@@ -286,7 +286,7 @@ export default {
         // }
       ],
       siteIntro: "I am a passionate developer  interested in creating things that take on a life of there own.",
-      about: "<p>I'm a Developer with an interest in hiking and martial arts. I'm always looking to learn how things work and why they are the way they are.</p><p>In my work I have an obsession  for finding the most effective solution to a given problem. Then refining it into something elegant and precise. This makes me exited for new challenges that come my way.</p>",
+      about: "<p>I'm a Developer with an interest in hiking and martial arts. I'm always looking to learn how things work and why they are the way they are.</p><p>In my work, I have an obsession  for finding the most effective solution to a given problem. Then refining it into something elegant and precise.</p>",
       title: "Adam Brown",
       sub: "Software Developer",
       navigation: [
@@ -299,7 +299,12 @@ export default {
           icon: 'mdi-account',
           title: 'About',
           click: () => this.$vuetify.goTo('#aboutGroup')
-        },        
+        },
+        {
+          icon: 'mdi-briefcase',
+          title: 'Experience',
+          click: () => this.$vuetify.goTo('#experience')
+        },           
         {
           icon: 'mdi-pencil',
           title: 'Projects',
