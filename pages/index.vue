@@ -125,6 +125,11 @@ import SectionHead from '~/components/SectionHead'
 import MediaGroup from '~/components/MediaGroup'
 import ProjectCard from '~/components/Project'
 export default {
+  head () {
+    return {
+      title: "Adam Brown Portfolio"
+    }
+  },
   name: "Portfolio",
   components: {
     MediaGroup,
