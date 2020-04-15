@@ -31,7 +31,7 @@
             </v-card-text>
             <v-card-text>
               <h3>
-                Acomplishments
+                Accomplishments
               </h3>
               <ul>
                 <li v-for="(point, i) in job.acomplishments" :key="i">
@@ -186,7 +186,7 @@ export default {
         {
           title: "Full-Stack  Developer",
           company: "Tempus Dynamics",
-          description: "Worked with a agile team of 5 developers on business process automation in the space of non profit research  with HIPPA compliance. My responsibilities included new development maintenance and documentation of application. As well as presenting features, and planning  applications with other developers, clients and subject experts.",
+          description: "I currently Work with a agile team of 5 developers on business process automation in the space of non profit research  with HIPPA compliance. My responsibilities included new development maintenance and documentation of application. As well as presenting features, and planning  applications with other developers, clients and subject experts.",
           time: "March 2019 - present",
           acomplishments: [
             "Created data collection platform that integrated  with multiple workflow engines using .net core and Vuejs",
@@ -285,8 +285,8 @@ export default {
         //   ]
         // }
       ],
-      siteIntro: "I am a passionate developer  interested in creating things that take on a life of there own.",
-      about: "<p>I'm a Developer with an interest in hiking and martial arts. I'm always looking to learn how things work and why they are the way they are.</p><p>In my work, I have an obsession  for finding the most effective solution to a given problem. Then refining it into something elegant and precise.</p>",
+      siteIntro: "I am a passionate developer  interested in creating things that take on a life of their own.",
+      about: "<p>I'm a developer with an interest in hiking and martial arts. I'm always looking to learn how things work and why they are the way they are.</p><p>I have an obsession  for finding the most effective solution to a given problem, then refining it into something elegant and precise.</p>",
       title: "Adam Brown",
       sub: "Software Developer",
       navigation: [
@@ -341,7 +341,7 @@ export default {
           this.contactBtnDisabled = true
           this.$axios.$post("/status", {message: this.message, name: this.name, email: this.email}).then(res => {
             this.contactBtnLoading = false;
-            this.contactBtnMessage = "Thank you, I will respond as soon as I can." 
+            this.contactBtnMessage = "Thank you, I will respond as soon." 
           }).catch( err => {
             this.contactBtnLoading = false;
             this.contactBtnMessage = '<p style="color: red" >Failed to send. You can still contact me at <a href="mailto:adamb5441@gmail.com">adamb5441@gmail.com</a>.</p>'

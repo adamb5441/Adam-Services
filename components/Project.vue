@@ -27,6 +27,8 @@
         v-model="dialog"
         class="modal"
         max-width="1000px"
+        height="300px"
+        
       >
         <!-- <v-btn 
             fab
@@ -42,6 +44,7 @@
         </v-btn> -->
         <v-card class="modelCard">
         <v-carousel
+            height="30vh"
             cycle
             show-arrows-on-hover
             >
