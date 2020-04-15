@@ -20,6 +20,28 @@
             </v-row>
           </v-container>
       </div>
+      <div class="section" id="experience">
+        <sectionHead>Experience</sectionHead>
+        <v-container class="experienceBody">
+          <v-card v-for="(job, i) in experience" :key="i">
+            <v-card-title><div class="experienceHeadCompany"><h2>{{job.company}}</h2><h5>{{job.time}}</h5></div><v-spacer /><h4>{{job.title}}</h4></v-card-title>
+            <v-divider />
+            <v-card-text>
+              {{job.description}}
+            </v-card-text>
+            <v-card-text>
+              <h3>
+                Acomplishments
+              </h3>
+              <ul>
+                <li v-for="(point, i) in job.acomplishments" :key="i">
+                  {{point}}
+                </li>
+              </ul>
+            </v-card-text>
+          </v-card>
+        </v-container>
+      </div>
       <div class="section" id="projects">
         <SectionHead>Projects</SectionHead>
           <v-container >
@@ -160,12 +182,25 @@ export default {
           label: "Postman"
         },
       ],
+      experience: [
+        {
+          title: "Full-Stack  Developer",
+          company: "Tempus Dynamics",
+          description: "Worked with a agile team of 5 developers on business process automation in the space of non profit research  with HIPPA compliance. My responsibilities included new development maintenance and documentation of application. As well as presenting features, and planning  applications with other developers, clients and subject experts.",
+          time: "March 2019 - present",
+          acomplishments: [
+            "Created data collection platform that integrated  with multiple workflow engines using .net core and Vuejs",
+            "Built cms system for email services and internal json tools using .NET mvc.",
+            "Created data visualization platform using vuejs."
+          ],
+        }
+      ],
       projects: [
         {
           title: "This portfolio",
           mainImg: "/img/NUXT.png",
           descriptionShort: "The website your looking at is a nuxt app using serverside vue.",
-          descriptionLong: "This site was designed by me and built using nuxt and vuetify. Making the most out of the view model design to separate text and html. In addition to being set up with a github to heroku pipline to automatically deploy changes to the master branch.",
+          descriptionLong: "This site was designed by me and built using nuxt and vuetify. Making the most out of the view model design to separate text and html. In addition to being set up with a github to heroku pipline to automatically deploy changes commited to the master branch.",
           imgs: [
             "/img/nuxtapp.png"
           ],
@@ -176,7 +211,7 @@ export default {
           title: "Finite",
           mainImg: "/img/Screenshot_2019-03-18 Finite.png",
           descriptionShort: "A .NET mvc project using for managing for track a household budget.",
-          descriptionLong: "Finite is a three part application for finnancial planning. Using a budget tracker to separate by catagory and an account balance with over draft and custom alert.",
+          descriptionLong: "Finite is a finnancial planning application for household budgeting that uses a budget tracker to separate by catagory and an account balance with over draft and custom alert.",
           imgs: [
             "/img/Screenshot_2019-03-18 Finite.png",
             "/img/Screenshot_2019-03-18 Finite(1).png",
@@ -234,21 +269,21 @@ export default {
           siteLink: "https://digi-dash.co/",
           repoLink: "https://github.com/adamb5441/digidash" 
         },
-        {
-          title: "Trip Planner",
-          mainImg: "/img/portimg1.png",
-          repoLink: "https://github.com/adamb5441/Personal_project",
-          descriptionShort: "A react node and postgres app using Auth0.",
-          descriptionLong: "The Trip Planner is a full CRUD app made with the PERN stack using Sessions and Auth0 to login and manage information under the profile. The app has a note, calendar and map portion to help stop bad planning!",
-          imgs: [
-            "/img/trip-planner/tp01.jpg",
-            "/img/trip-planner/tp02.jpg",
-            "/img/trip-planner/tp03.jpg",
-            "/img/trip-planner/tp04.jpg",
-            "/img/trip-planner/tp05.jpg",
-            "/img/trip-planner/tp06.jpg",
-          ]
-        }
+        // {
+        //   title: "Trip Planner",
+        //   mainImg: "/img/portimg1.png",
+        //   repoLink: "https://github.com/adamb5441/Personal_project",
+        //   descriptionShort: "A react node and postgres app using Auth0.",
+        //   descriptionLong: "The Trip Planner is a full CRUD app made with the PERN stack using Sessions and Auth0 to login and manage information under the profile. The app has a note, calendar and map portion to help stop bad planning!",
+        //   imgs: [
+        //     "/img/trip-planner/tp01.jpg",
+        //     "/img/trip-planner/tp02.jpg",
+        //     "/img/trip-planner/tp03.jpg",
+        //     "/img/trip-planner/tp04.jpg",
+        //     "/img/trip-planner/tp05.jpg",
+        //     "/img/trip-planner/tp06.jpg",
+        //   ]
+        // }
       ],
       siteIntro: "I am a passionate developer  interested in creating things that take on a life of there own.",
       about: "<p>I'm a Developer with an interest in hiking and martial arts. I'm always looking to learn how things work and why they are the way they are.</p><p>In my work I have an obsession  for finding the most effective solution to a given problem. Then refining it into something elegant and precise. This makes me exited for new challenges that come my way.</p>",
@@ -329,6 +364,10 @@ export default {
 </script>
 
 <style scoped>
+.experienceHeadCompany{
+  display: flex;
+  flex-direction: column;
+}
 .contactGroup{
   margin: 10px;
 }
