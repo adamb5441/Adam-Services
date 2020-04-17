@@ -149,7 +149,23 @@ export default {
         {
           img: "/img/vue-logo.png",
           label: "Vue"
+        },
+        {
+          img: "/img/VUEX.png",
+          label: "Vuex"
+        },
+        {
+          img: "/img/DOTNETCORE.png",
+          label: ".NET core"
+        },
+        {
+          img: "/img/LINQ.png",
+          label: "Linq"
         },    
+        {
+          img: "/img/ENTITY.png",
+          label: "Entity"
+        },
         {
           img: "/img/react.png",
           label: "React"
@@ -171,21 +187,26 @@ export default {
           label: ".NET MVC"
         },
         {
-          img: "/img/ENTITY.png",
-          label: "Entity"
-        },
-        {
-          img: "/img/MSSQL.png",
+          img: "/img/SQL.png",
           label: "SQL"
-        },
-        {
-          img: "/img/LINQ.png",
-          label: "Linq"
         },
         {
           img: "/img/postman.png",
           label: "Postman"
         },
+        {
+          img: "/img/HTML.png",
+          label: "HTML"
+        },        
+        {
+          img: "/img/CSS.png",
+          label: "CSS"
+        },        
+        {
+          img: "/img/Python.png",
+          label: "Python"
+        }
+
       ],
       experience: [
         {
@@ -238,17 +259,6 @@ export default {
           ]
         },
         {
-          title: "Keyboard Warrior",
-          mainImg: "/img/portimg3.png",
-          descriptionShort: "A react and node ecommerce app using bcrypt login.",
-          descriptionLong: "The Keyboard Warrior is an eCommerce app using both local storage and database carts for a dynamic user experience. Features include search by names, sorting by costs, sorting by alphabet order and bcrypt login.  All so that the user can unleash there inner keyboard warrior!",
-          imgs: [
-            "/img/ext (2).jpg",
-            "/img/ext (3).jpg",
-          ],
-          repoLink: "https://github.com/adamb5441/ecommerce"
-        },
-        {
           title: "Legend's Blog",
           repoLink: "https://github.com/adamb5441/mvcBlog",
           mainImg: "/img/himalaya-evening.jpg",
@@ -259,6 +269,17 @@ export default {
           ],
           descriptionShort: "A blog site written in .NET mvc using 0Auth login.",
           descriptionLong: "The Legend's Blog is a .net mvc5 application with a blogpost feed, comment section and 3rd party login."
+        },
+        {
+          title: "Keyboard Warrior",
+          mainImg: "/img/portimg3.png",
+          descriptionShort: "A react and node ecommerce app using bcrypt login.",
+          descriptionLong: "The Keyboard Warrior is an eCommerce app using both local storage and database carts for a dynamic user experience. Features include search by names, sorting by costs, sorting by alphabet order and bcrypt login.  All so that the user can unleash there inner keyboard warrior!",
+          imgs: [
+            "/img/ext (2).jpg",
+            "/img/ext (3).jpg",
+          ],
+          repoLink: "https://github.com/adamb5441/ecommerce"
         },
         {
           title: "DigiDash",
