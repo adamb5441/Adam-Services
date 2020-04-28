@@ -11,10 +11,11 @@ import Editor from '@/components/Editor.vue'
 import UrlInput from '@/components/UrlInput.vue'
 
 export default {
-  name: 'home',
+  name: 'jdev',
   props: {
     loggedIn: Boolean
   },
+  layout: 'none',
   components: {
     Editor,
     UrlInput
