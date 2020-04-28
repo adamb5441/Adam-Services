@@ -15,12 +15,15 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/dotenv": "^1.4.0",
+    "axios": "^0.19.2",
     "cross-env": "^5.2.0",
     "dotenv": "^8.2.0",
     "express": "^4.16.4",
     "express-mailer": "^0.3.1",
     "nodemailer": "^6.4.6",
-    "nuxt": "^2.0.0"
+    "nuxt": "^2.0.0",
+    "v-clipboard": "^2.2.2",
+    "v-jsoneditor": "^1.4.1"
   },
   "devDependencies": {
     "@nuxtjs/vuetify": "^1.0.0",
