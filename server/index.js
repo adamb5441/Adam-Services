@@ -4,6 +4,7 @@ const { Nuxt, Builder } = require('nuxt')
 const app = express()
 const EmailController = require('./EmailController')
 const bodyparser = require ('body-parser');
+OutsSideController = require('./OutsideController')
 app.use(bodyparser.json())
 require('dotenv').config()
 
@@ -24,6 +25,8 @@ async function start () {
     await builder.build()
   }
   app.post("/status", EmailController.contactEmail)
+  app.post("/api/getJSON", OutsSideController.getJSON)
+  app.post("/api/postJSON", OutsSideController.sendJSON)
   // Give nuxt middleware to express
   app.use(nuxt.render)
 

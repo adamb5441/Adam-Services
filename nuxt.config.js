@@ -30,7 +30,8 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    { src: '~/plugins/particles.js', mode: 'client'},
+    { src: '~/plugins/v-jsoneditor.js', mode: 'client'},
+    { src: '~/plugins/v-clipboard.js', mode: 'client'}
   ],
   /*
   ** Nuxt.js dev-modules
