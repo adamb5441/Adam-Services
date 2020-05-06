@@ -1,8 +1,8 @@
 <template>
-  <div class="home">
+  <v-container class="home">
     <UrlInput @sendEvent="sendHandler" :text="JSONdata" />
     <Editor @inputEvent="inputHandler" :jData="JSONdata" />
-  </div>
+  </v-container>
 </template>
 
 <script>
@@ -15,7 +15,7 @@ export default {
   props: {
     loggedIn: Boolean
   },
-  layout: 'none',
+  layout: 'tabControl',
   components: {
     Editor,
     UrlInput
@@ -41,7 +41,7 @@ export default {
     post(request){
       this.$axios.$post("/api/getJSON", {url: request.url, package: this.JSONdata}).then(res => {
         this.success = true
-      })      
+      })
     }
   }
 }
