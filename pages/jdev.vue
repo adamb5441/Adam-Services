@@ -24,6 +24,7 @@ export default {
     JSONdata: {},
     geturl: "",
     posturl: "",
+    history: [],
     success: false
   }),
   methods: {
