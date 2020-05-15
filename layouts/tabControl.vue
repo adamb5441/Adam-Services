@@ -12,22 +12,34 @@
         grow
       >
         <v-tab>
-        <v-list>
-          <span
-          v-for="(item, i) in navs"
-          :key="i"
-          >
-              <v-list-item>
-                  <v-list-item-action>
-                      <v-icon>{{ item.type }}</v-icon>
-                  </v-list-item-action>
-                  <v-list-item-content>
-                      <v-list-item-title v-text="item.title" />
-                  </v-list-item-content>
-              </v-list-item>
-          </span>
-        </v-list>
+          History
+        </v-tab>
+        <v-tab>
+          Projects
+        </v-tab>
       </v-tabs>
+      <v-tab-items v-model="tab">
+        <v-tab-item>
+          <v-list>
+            <span
+            v-for="(item, i) in navs"
+            :key="i"
+            >
+                <v-list-item>
+                    <v-list-item-action>
+                        <v-icon>{{ item.type }}</v-icon>
+                    </v-list-item-action>
+                    <v-list-item-content>
+                        <v-list-item-title v-text="item.title" />
+                    </v-list-item-content>
+                </v-list-item>
+            </span>
+          </v-list>
+        </v-tab-item>
+        <v-tab-item>
+          Please login
+        </v-tab-item>
+      </v-tab-items>
     </v-navigation-drawer>
     <v-app-bar
       class="hidden-lg-and-up appbar"
@@ -50,9 +62,9 @@ export default {
   },
   data () {
     return {
+      tab: null,
       toolbar: false,
       drawer: true,
-      items: [],
       right: true,
       rightDrawer: false,
       title: 'image',
