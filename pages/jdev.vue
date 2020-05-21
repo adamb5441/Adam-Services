@@ -44,6 +44,11 @@ export default {
         this.success = true
       })
     }
+  },
+  computed: {
+    selected(){
+      return this.$store.getters.selected
+    }
   }
 }
 </script>

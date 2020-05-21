@@ -93,8 +93,8 @@ export default {
     }
   },
   computed: {
-    navs(){
-      return this.$store.getters.getNav
+    history(){
+      return this.$store.getters.history
     },
     isMobile () {
       switch (this.$vuetify.breakpoint.name) {

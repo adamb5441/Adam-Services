@@ -8,10 +8,10 @@
                 <v-col sm="2">
                     <v-select v-model="type" fullwidth height="20px" outlined  single-line :items="types" ></v-select>
                 </v-col>
-        </v-row>  
+        </v-row>
         <v-row>
             <v-col>
-                <v-btn v-clipboard="() => text">copy to clipboard</v-btn>
+                <v-btn depressed v-clipboard="() => text">copy to clipboard</v-btn>
             </v-col>
         </v-row>
     </v-card>
