@@ -22,8 +22,6 @@ export default {
   },
   data: () => ({
     JSONdata: {},
-    geturl: "",
-    posturl: "",
     history: [],
     success: false
   }),
