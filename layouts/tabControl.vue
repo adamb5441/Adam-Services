@@ -11,16 +11,16 @@
         color="basil"
         grow
       >
-        <v-tab>
+        <v-tab >
           History
         </v-tab>
-        <v-tab>
+        <v-tab >
           Projects
         </v-tab>
       </v-tabs>
-      <v-tab-items v-model="tab">
-        <v-tab-item>
-          <v-list>
+      <v-tabs-items  v-model="tab">
+        <v-tab-item >
+          <v-list >
             <span
             v-for="(item, i) in history"
             :key="i"
@@ -36,10 +36,10 @@
             </span>
           </v-list>
         </v-tab-item>
-        <v-tab-item>
-          Please login
+        <v-tab-item >
+          <p>Please login</p>
         </v-tab-item>
-      </v-tab-items>
+      </v-tabs-items>
     </v-navigation-drawer>
     <v-app-bar
       class="hidden-lg-and-up appbar"

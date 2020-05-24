@@ -51,11 +51,11 @@
       </v-list>
     </v-navigation-drawer>
     <v-app-bar
-      class="hidden-lg-and-up appbar" 
+      class="hidden-lg-and-up appbar"
       app
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      
+
       <v-toolbar-title><h4>{{title}}</h4> <h6>{{sub}}</h6> </v-toolbar-title>
     </v-app-bar>
     <v-content id="mainContent">
@@ -67,7 +67,7 @@
 <script>
 export default {
   components: {
-    
+
   },
   data () {
     return {
@@ -100,7 +100,7 @@ export default {
         this.drawer = false
       }
     }
-  }, 
+  },
   computed: {
     navs(){
       return this.$store.getters.getNav
