@@ -25,12 +25,12 @@
             v-for="(item, i) in history"
             :key="i"
             >
-                <v-list-item>
+                <v-list-item @click="() => select(item)" >
                     <v-list-item-action>
-                        <v-icon>{{ item.type }}</v-icon>
+                        <h3>{{ item.type }}</h3>
                     </v-list-item-action>
                     <v-list-item-content>
-                        <v-list-item-title v-text="item.title" />
+                        <v-list-item-title v-text="item.url" />
                     </v-list-item-content>
                 </v-list-item>
             </span>
@@ -82,14 +82,11 @@ export default {
     }
   },
   methods: {
+    select(item){
+      this.$store.commit("selectRequest", item)
+    },
     setNavBtns(navs){
       this.items = navs
-    },
-    navEvent(ev){
-      ev()
-      if(this.isMobile){
-        this.drawer = false
-      }
     }
   },
   computed: {

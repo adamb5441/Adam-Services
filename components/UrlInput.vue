@@ -37,7 +37,7 @@ export default {
     },
     computed: {
       selected(){
-        return this.$store.getters.selected
+        return this.$store.getters.getSelected
       }
     },
     watch: {
