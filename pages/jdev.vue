@@ -27,7 +27,7 @@ export default {
   }),
   methods: {
     sendHandler(request){
-      this[request.event](request)
+      this[request.type](request)
     },
     inputHandler(val){
       this.JSONdata = val
@@ -35,17 +35,15 @@ export default {
     async get(request){
       this.$axios.$post("/api/getJSON", {url: request.url}).then(res => {
         this.JSONdata = res
+        this.$store.commit("addHistory", request)
       })
     },
     post(request){
       this.$axios.$post("/api/getJSON", {url: request.url, package: this.JSONdata}).then(res => {
-        this.success = true
+        this.success = true,
+        request.body = this.JSONdata
+        this.$store.commit("addHistory", request)
       })
-    }
-  },
-  computed: {
-    selected(){
-      return this.$store.getters.selected
     }
   }
 }

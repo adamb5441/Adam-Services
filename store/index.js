@@ -21,7 +21,7 @@ const createStore = () => {
         state.selected.type = payload
       },
       addHistory(state, payload){
-
+          state.history.unshift(payload)
       },
       selectRequest(state, payload) {
         state.selected = payload
@@ -47,7 +47,7 @@ const createStore = () => {
         return state.navigation
       },
       getHistory(state){
-        return state.navigation
+        return state.history
       },
       getters(state){
         return state.isLoggedIn

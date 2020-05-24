@@ -32,8 +32,19 @@ export default {
     },
     methods: {
         send(){
-            this.$emit("sendEvent", {url: this.url, event: this.type})
+            this.$emit("sendEvent", {url: this.url, type: this.type})
         }
+    },
+    computed: {
+      selected(){
+        return this.$store.getters.selected
+      }
+    },
+    watch: {
+      selected(newVal){
+        this.url = newVal.url
+        this.type = newVal.type
+      }
     }
 }
 </script>

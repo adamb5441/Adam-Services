@@ -22,7 +22,7 @@
         <v-tab-item>
           <v-list>
             <span
-            v-for="(item, i) in navs"
+            v-for="(item, i) in history"
             :key="i"
             >
                 <v-list-item>
@@ -94,7 +94,7 @@ export default {
   },
   computed: {
     history(){
-      return this.$store.getters.history
+      return this.$store.getters.getHistory
     },
     isMobile () {
       switch (this.$vuetify.breakpoint.name) {
