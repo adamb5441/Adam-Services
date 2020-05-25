@@ -2,11 +2,11 @@
     <v-card class="card__layout">
         <v-row>
                 <v-col class="input___container" sm="6">
-                    <v-text-field v-model="url" outlined class="input__field" />
+                    <v-text-field v-on:input="updateStore" v-model="url" outlined class="input__field" />
                     <v-btn @click="send" height="56px">Go</v-btn>
                 </v-col>
                 <v-col sm="2">
-                    <v-select v-model="type" fullwidth height="20px" outlined  single-line :items="types" ></v-select>
+                    <v-select v-on:input="updateStore" v-model="type" fullwidth height="20px" outlined  single-line :items="types" ></v-select>
                 </v-col>
         </v-row>
         <v-row>
@@ -31,6 +31,9 @@ export default {
         }
     },
     methods: {
+        updateStore(){
+          this.$store.commit("selectRequest", {url: this.url, type: this.type})
+        },
         send(){
             this.$emit("sendEvent", {url: this.url, type: this.type})
         }

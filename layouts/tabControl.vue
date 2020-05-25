@@ -18,14 +18,16 @@
           Projects
         </v-tab>
       </v-tabs>
-      <v-tabs-items  v-model="tab">
-        <v-tab-item >
+      <v-tabs-items color="basil" v-model="tab">
+        <v-tab-item  >
           <v-list >
             <span
             v-for="(item, i) in history"
             :key="i"
             >
-                <v-list-item @click="() => select(item)" >
+            <v-tooltip bottom>
+              <template v-slot:activator="{ on }">
+                <v-list-item v-on="on" @click="() => select(item)" >
                     <v-list-item-action>
                         <h3>{{ item.type }}</h3>
                     </v-list-item-action>
@@ -33,6 +35,9 @@
                         <v-list-item-title v-text="item.url" />
                     </v-list-item-content>
                 </v-list-item>
+              </template>
+              <span> {{ item.url}}</span>
+            </v-tooltip>
             </span>
           </v-list>
         </v-tab-item>
