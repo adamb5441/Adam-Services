@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-jsoneditor v-model="json" :options="options" :plus="true" height="1000px" @error="onError" />
+    <v-jsoneditor v-model="json" :options="options" :plus="false" :height="'75vh'" @error="onError" />
   </div>
 </template>
 
