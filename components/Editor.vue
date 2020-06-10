@@ -37,12 +37,29 @@ export default {
 <style>
 .jsoneditor{
   height: 75vh !important;
-  border: thin solid #1E1E1E;
+  border: thin solid #1E1E1E !important;
 }
 .jsoneditor-menu {
-    background-color: #1E1E1E;
+    background-color: #1e1e1e !important;
+    border-bottom: none
 }
-.sda{
-  background-color: #121212;
+.ace_content{
+  background-color: #121212 !important;
+}
+.ace_gutter{
+    background-color: #1e1e1e !important;
+}
+.ace-jsoneditor .ace_gutter-active-line {
+    background-color: #3068A0 !important;
+    color: #ffffff !important;
+}
+.ace-jsoneditor .ace_marker-layer .ace_active-line {
+    background-color: #3068A0 !important;
+}
+.jsoneditor-statusbar{
+    background-color: #1E1E1E !important;
+}
+.ace_gutter-cell{
+  color: #ffffff !important;
 }
 </style>
