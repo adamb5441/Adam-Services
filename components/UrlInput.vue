@@ -54,7 +54,8 @@ export default {
 
 <style>
 .card__layout{
-    padding: 10px
+    padding: 10px;
+    border-radius: 5px 5px 0 0 !important;
 }
 .input___container{
     display: flex;
