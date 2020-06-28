@@ -69,15 +69,15 @@ export default {
 border-left: 2px solid white
 }
 .ace-jsoneditor .ace_variable {
-color: blue
+color: #64D686
 }
 .ace-jsoneditor .ace_string {
-color: white
+color: #EFE89F
 }
 .ace-jsoneditor .ace_comment {
 color: white
 }
 .ace-jsoneditor .ace_constant.ace_numeric {
-color:  white
+color:  #9B4F42
 }
 </style>
