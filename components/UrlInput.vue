@@ -26,7 +26,7 @@ export default {
     data: function(){
         return{
             url: "",
-            type: "",
+            type: "get",
             types: ["post", "get"]
         }
     },

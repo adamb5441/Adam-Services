@@ -62,4 +62,22 @@ export default {
 .ace_gutter-cell{
   color: #ffffff !important;
 }
+.ace-jsoneditor .ace_text-layer {
+    color: white !important;
+}
+.ace-jsoneditor .ace_cursor {
+border-left: 2px solid white
+}
+.ace-jsoneditor .ace_variable {
+color: blue
+}
+.ace-jsoneditor .ace_string {
+color: white
+}
+.ace-jsoneditor .ace_comment {
+color: white
+}
+.ace-jsoneditor .ace_constant.ace_numeric {
+color:  white
+}
 </style>
