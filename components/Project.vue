@@ -27,24 +27,10 @@
         v-model="dialog"
         class="modal"
         max-width="1000px"
-        height="300px"
-        
       >
-        <!-- <v-btn 
-            fab
-            dark
-            x-large
-            top
-            right 
-            icon 
-            @click="dialog = false"
-            style="marginTop: 30px"
-        >
-            <v-icon>mdi-close</v-icon>
-        </v-btn> -->
         <v-card class="modelCard">
         <v-carousel
-            height="30vh"
+            :height="isMobile"
             cycle
             show-arrows-on-hover
             >
@@ -56,11 +42,11 @@
 
             </v-carousel-item>
         </v-carousel>
-  
+
           <v-card-text class="modalText">
               {{descriptionLong}}
           </v-card-text>
-  
+
         </v-card>
       </v-dialog>
     </div>
@@ -70,7 +56,7 @@ export default {
     name: "Project",
     props: {
         title: {
-            default: "New Project",  
+            default: "New Project",
             type: String
         },
         mainImg: {
@@ -99,6 +85,17 @@ export default {
             default: "",
             type: String
         }
+    },
+    computed: {
+      isMobile () {
+        switch (this.$vuetify.breakpoint.name) {
+          case 'xs': return "200px"
+          case 'sm': return "200px"
+          case 'md': return "500px"
+          case 'lg': return "500px"
+          case 'xl': return "500px"
+        }
+      },
     },
     data: () => ({
         overlay: false,
@@ -133,4 +130,5 @@ export default {
 .modalText{
     font-size: 18px;
 }
+
 </style>
