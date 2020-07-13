@@ -50,11 +50,11 @@ export default {
     background-color: #1e1e1e !important;
 }
 .ace-jsoneditor .ace_gutter-active-line {
-    background-color: #3068A0 !important;
+    background-color: blue !important;
     color: #ffffff !important;
 }
 .ace-jsoneditor .ace_marker-layer .ace_active-line {
-    background-color: #3068A0 !important;
+    background-color: blue !important;
 }
 .jsoneditor-statusbar{
     background-color: #1E1E1E !important;
@@ -69,7 +69,7 @@ export default {
 border-left: 2px solid white
 }
 .ace-jsoneditor .ace_variable {
-color: #64D686
+color: gold
 }
 .ace-jsoneditor .ace_string {
 color: #EFE89F
@@ -77,7 +77,11 @@ color: #EFE89F
 .ace-jsoneditor .ace_comment {
 color: white
 }
+
 .ace-jsoneditor .ace_constant.ace_numeric {
 color:  #9B4F42
+}
+.ace-jsoneditor .ace_marker-layer .ace_selection {
+  background: #3068A0
 }
 </style>
