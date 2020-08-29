@@ -1,6 +1,6 @@
 <template>
     <div>
-      <div class="" id="titleGroup"> 
+      <div class="" id="titleGroup">
         <div id="title">
           <h2 >{{siteIntro}}</h2>
         </div>
@@ -53,7 +53,7 @@
                 cols="12"
                 lg="4"
               >
-                <ProjectCard 
+                <ProjectCard
                 :title="project.title"
                 :mainImg="project.mainImg"
                 :imgs="project.imgs"
@@ -65,7 +65,7 @@
               </v-col>
             </v-row>
           </v-container>
-      </div>      
+      </div>
       <div class="section" id="skills">
         <SectionHead>Skills</SectionHead>
         <v-container class="skillWrapper">
@@ -104,13 +104,13 @@
           <div class="contactGroup">
             <v-btn href="https://github.com/adamb5441" x-large icon>
               <v-icon dark>mdi-github</v-icon>
-            </v-btn>      
+            </v-btn>
             <v-btn  href="https://www.linkedin.com/in/adamb54/" x-large icon>
               <v-icon dark>mdi-linkedin</v-icon>
             </v-btn>
             <v-btn  href="mailto:adamb5441@gmail.com" x-large icon>
               <v-icon dark>mdi-email</v-icon>
-            </v-btn>           
+            </v-btn>
           </div>
         </v-container>
         <MediaGroup />
@@ -161,7 +161,7 @@ export default {
         {
           img: "/img/LINQ.png",
           label: "Linq"
-        },    
+        },
         {
           img: "/img/ENTITY.png",
           label: "Entity"
@@ -173,7 +173,7 @@ export default {
         {
           img: "/img/jquery.png",
           label: "JQuery"
-        },    
+        },
         {
           img: "/img/smlNode.png",
           label: "Node"
@@ -197,11 +197,11 @@ export default {
         {
           img: "/img/HTML.png",
           label: "HTML"
-        },        
+        },
         {
           img: "/img/CSS.png",
           label: "CSS"
-        },        
+        },
         {
           img: "/img/Python.png",
           label: "Python"
@@ -213,7 +213,7 @@ export default {
           title: "Full-Stack  Developer",
           company: "Tempus Dynamics",
           description: "I currently Work with a agile team of 5 developers on business process automation in the space of non profit research  with HIPPA compliance. My responsibilities included new development maintenance and documentation of application. As well as presenting features, and planning  applications with other developers, clients and subject experts.",
-          time: "March 2019 - present",
+          time: "March 2019 - August 2020",
           acomplishments: [
             "Created data collection platform that integrated  with multiple workflow engines using .net core and Vuejs",
             "Built cms for email services and internal json tools using .NET mvc.",
@@ -293,7 +293,7 @@ export default {
             "/img/digi04.png"
           ],
           siteLink: "https://digi-dash.co/",
-          repoLink: "https://github.com/adamb5441/digidash" 
+          repoLink: "https://github.com/adamb5441/digidash"
         },
         // {
         //   title: "Trip Planner",
@@ -320,7 +320,7 @@ export default {
           icon: 'mdi-home',
           title: 'Home',
           click: () => this.$vuetify.goTo(0)
-        }  ,      
+        }  ,
         {
           icon: 'mdi-account',
           title: 'About',
@@ -330,12 +330,12 @@ export default {
           icon: 'mdi-briefcase',
           title: 'Experience',
           click: () => this.$vuetify.goTo('#experience')
-        },           
+        },
         {
           icon: 'mdi-pencil',
           title: 'Projects',
           click: () => this.$vuetify.goTo('#projects')
-        },        
+        },
         {
           icon: 'mdi-library',
           title: 'Skills',
@@ -367,7 +367,7 @@ export default {
           this.contactBtnDisabled = true
           this.$axios.$post("/status", {message: this.message, name: this.name, email: this.email}).then(res => {
             this.contactBtnLoading = false;
-            this.contactBtnMessage = "Thank you, I will respond as soon." 
+            this.contactBtnMessage = "Thank you, I will respond as soon."
           }).catch( err => {
             this.contactBtnLoading = false;
             this.contactBtnMessage = '<p style="color: red" >Failed to send. You can still contact me at <a href="mailto:adamb5441@gmail.com">adamb5441@gmail.com</a>.</p>'
@@ -390,7 +390,7 @@ export default {
       }
     }
   }
-  
+
 }
 </script>
 
@@ -434,10 +434,10 @@ export default {
   }
   #titleGroup {
     min-height: 60vh;
-    display: block; 
-    height: 100vh; 
-    width: 100%; 
-    background-image: url('/img/nightsky.jpeg');  
+    display: block;
+    height: 100vh;
+    width: 100%;
+    background-image: url('/img/nightsky.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
   }
