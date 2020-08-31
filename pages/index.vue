@@ -212,7 +212,7 @@ export default {
         {
           title: "Full-Stack  Developer",
           company: "Tempus Dynamics",
-          description: "I Worked with an agile team of 5 developers on business process automation in the space of non profit research  with HIPPA compliance. My responsibilities included new development maintenance and documentation of application. As well as presenting features, and planning  applications with other developers, clients and subject experts.",
+          description: "I worked with a agile team of 5 developers on business process automation in the space of non profit research  with HIPPA compliance. My responsibilities included new development maintenance and documentation of application. As well as presenting features, and planning  applications with other developers, clients and subject experts.",
           time: "March 2019 - August 2020",
           acomplishments: [
             "Created data collection platform that integrated  with multiple workflow engines using .net core and Vuejs",
